@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="challenge3.css">
+  <title>Age calculator app</title>
+</head>
+<body>
+  <div class="container">
+    <div class="container_calc">
+      <form class="container_calc-form" autocomplete="off" onsubmit="event.preventDefault();dateInputOnSubmit()">
+        <div class="container_calc-input">
+          <label for="day" class="for-day">DAY
+            <input type="number" name="day" placeholder="DD" id="day-input" onkeyup="dayInput()">
+          </label>
+          <label for="month" class="for-month">MONTH
+            <input type="number" name="month" placeholder="MM" id="month-input" onkeyup="monthInput()">
+          </label>
+          <label for="year" class="for-year">YEAR
+            <input type="number" name="year" placeholder="YYYY" id="year-input" onkeyup="yearInput()">
+          </label>
+        </div>
+        <div class="container_calc-button"><span></span>
+          <input class="button" type="submit" value="↓">
+        </div>
+      </form>
+      <div class="container__age-calculator--output">
+        <h1 id="year-output"><span>--</span>years</h1>
+        <h1 id="month-output"><span>--</span>months</h1>
+        <h1 id="day-output"><span>--</span>days</h1>
+      </div>
+    </div>
+  </div>
+  <script src="app3.js"></script>
+</body>
+</html>

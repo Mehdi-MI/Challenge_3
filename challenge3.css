@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Poppins-bold;
+    src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+    font-family: Poppins-boldItalic;
+    src: url("./assets/fonts/Poppins-BoldItalic.ttf");
+}
+@font-face {
+    font-family: Poppins-extraBold;
+    src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+    font-family: Poppins-extraBoldItalic;
+    src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+@font-face {
+    font-family: Poppins-italic;
+    src: url("./assets/fonts/Poppins-Italic.ttf");
+}
+@font-face {
+    font-family: Poppins-regular;
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: Poppins-extraBoldItalic;
+    line-height: 1;
+}
+span {
+    font-family: Poppins-extraBold;
+    color: #874bfc;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+.container_calc{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    margin: auto;
+}
+.container_calc-form {
+    display: flex;
+    flex-direction: column;
+}
+.container_calc-input {
+    display: flex;
+}
+.container_calc-button {
+    display: flex;
+    align-items: center;
+    
+}
+.container_calc-button span{
+    width: 85%;
+    height: 1px;
+    border: 1px solid #74747460;
+}
+
+.container_calc-input label {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    color: #747474;
+    font-family: Poppins-bold;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::placeholder {
+    color: #74747460;
+}
+.container_calc-input input {
+    font-family: Poppins-bold;
+    border: 1px solid #74747460;
+    outline-color: #874bfc;
+}
+.container__age-calculator--output {
+    min-width: fit-content;
+    min-height: fit-content;
+}
+.container_calc-input label:hover input {
+    border: 1px solid #874bfc;
+}
+.container_calc-input .for-day::after{
+    content: attr(text-content);
+    font-family: Poppins-italic;
+    color: red;
+}
+.container_calc-input .for-month::after{
+    content: attr(text-content);
+    font-family: Poppins-italic;
+}
+.container_calc-input .for-year::after{
+    content: attr(text-content);
+    font-family: Poppins-italic;
+}
+input[type=submit] {
+    border: none;
+    background-color: #874bfc;
+    color: white;
+}
+input[type=submit]:active {
+    background-color: #151515;
+}
+input[type=submit]:hover {
+    box-shadow: 0 0 2px #151515;
+}
+.attribution { font-family: Poppins-regular; font-size: 11px; text-align: center; margin: auto 0 5px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 280px) {
+    .container__age-calculator{
+        width: 250px;
+        height: fit-content;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px 20px 90px;
+    }
+    h1 {
+        font-size: 35px;
+    }
+    .container_calc-input label {
+        font-size: 6px;
+        margin: 0 auto
+    }
+    .container_calc-input input {
+        font-size: 15px;
+        width: 60px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    .container_calc-button {
+        position: relative;
+        height: 50px;
+        margin: 20px 0 0;
+        
+    }
+    .container_calc-button span{
+        width: 100%;
+    }
+    .container__age-calculator--output {
+        margin: auto 0;
+    }
+    input[type=submit] {
+        font-size: 30px;
+        position: absolute;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        left: 39%;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .container__age-calculator{
+        width: 700px;
+        height: 550px;
+        padding: 40px;
+        border-radius: 20px 20px 180px;
+    }
+    h1 {
+        font-size: 90px;
+    }
+    .container_calc-input label {
+        font-size: 10px;
+        margin: 0 20px 0 0;
+    }
+    .container_calc-input input {
+        width: 140px;
+        font-size: 32px;
+        padding: 5px 20px;
+        border-radius: 8px;
+    }
+    .container__age-calculator--output {
+        margin: auto 0;
+    }
+    input[type=submit] {
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        left: 86%;
+    }
+}
